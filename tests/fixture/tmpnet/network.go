@@ -185,7 +185,7 @@ func (n *Network) EnsureDefaultConfig(w io.Writer, avalancheGoPath string, plugi
 	if n.DefaultFlags == nil {
 		n.DefaultFlags = FlagsMap{}
 	}
-	n.DefaultFlags.SetDefaults(DefaultFlags())
+	n.DefaultFlags.SetDefaults(DefaultTmpnetFlags())
 
 	// Only configure the plugin dir with a non-empty value to ensure
 	// the use of the default value (`[datadir]/plugins`) when
